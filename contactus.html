@@ -4,73 +4,116 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <title>JVPFI</title>
-        
+
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <link href="libs/bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="libs/owl-carousel/owl.carousel.css" rel="stylesheet">
         <link rel="stylesheet" href="libs/owl-carousel/owl.theme.css">
-        <link rel="stylesheet" href="libs/fullpage/jquery.fullPage.css">
         <link href="assets/font/colaborate/stylesheet.css" rel="stylesheet">      
 
         <link href="assets/css/core.css" rel="stylesheet">
         <link href="assets/css/animate.css" rel="stylesheet">
+
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLIpik2tNRadx4HRUh_QNZo8CcYvA7WaQ&sensor=false">
+        </script>
+        <script type="text/javascript">
+            function initialize() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(14.6408495, 121.0779053),
+                    zoom: 17
+                };
+                var map = new google.maps.Map(document.getElementById("map-canvas"),
+                        mapOptions);
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
     </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                    <div class="col-lg-2 col-lg-offset-1">
-                        <a class="social-icons" href="#">
+    <body style="overflow-x:hidden;">
+        <!-- Responsive Navigation -->
+        <nav id="main-nav" class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img id="logo" src="assets/img/logo/jvpf-logo.png" />
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="stories.html">Stories</a></li>
+                        <li><a href="partners.html">Development Partners</a></li>
+                        <li class="active"><a href="contactus.html">Contact</a></li>
+                        <li><a href="https://www.phjesuits.org/pjf/share.php" target="_blank">Donate</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="container-fluid">
+            <div class="row" id="social-icons-container">
+                <div  class="col-lg-2 col-lg-offset-1 col-md-4 col-sm-6 col-xs-6">
+                    <a class="social-icons" href="https://www.facebook.com/pages/Jesuit-Volunteers-Philippines/223013984386591">
                         <img src="assets/img/icons/fb.jpg">
-                        <h3>Facebook</h3>
+                        <h3>FACEBOOK</h3>
                         <p>Like Us</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-2">
-                        <a class="social-icons" href="#">
-                        <img class="social-icons" src="assets/img/icons/twitter.jpg">
-                        <h3>Facebook</h3>
-                        <p>Like Us</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-2">
-                    <a class="social-icons" href="#">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+                    <a class="social-icons" href="https://twitter.com/jvpfoundation">
+                        <img src="assets/img/icons/twitter.jpg">
+                        <h3>TWITTER</h3>
+                        <p>Follow Us</p>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6" >
+                    <a class="social-icons" href="http://www.youtube.com/watch?v=V6uyawbUkiw">
                         <img src="assets/img/icons/yt.jpg">
-                        <h3>Facebook</h3>
-                        <p>Like Us</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-2">
-                    <a class="social-icons" href="#">
+                        <h3>YOUTUBE</h3>
+                        <p>Subscribe</p>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6">
+                    <div class="social-icons">
                         <img src="assets/img/icons/call.jpg">
-                        <h3>Facebook</h3>
-                        <p>Like Us</p>
-                        </a>
+                        <h3>TELEPHONE</h3>
+                        <p>(02)426-6001 Loc 4880</p>
                     </div>
-                    <div class="col-lg-2">
-                    <a class="social-icons" href="#">
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+                    <div class="social-icons" href="#">
                         <img src="assets/img/icons/fax.jpg">
-                        <h3>Facebook</h3>
-                        <p>Like Us</p>
-                        </a>
+                        <h3>TELEFAX</h3>
+                        <p>(02) 426 - 5908</p>
                     </div>
+                </div>
             </div>
         </div>
-        
+        <div class="row" id="location">
+            <div class="col-lg-12">
+                <div class="container-fluid">
+                    <h3>Location: National Office Room 220 MVP-CSL Building Ateneo de Manila University, Loyola Heights, Quezon City</h3>
+                </div>
+            </div>
+        </div>
 
-        <div class="container-fluid contact">
-           <div id="gmap"></div>
-        </div>
-                
-        </div>
+        <div id="map-canvas"></div>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script type="text/javascript" src="assets/js/jquery.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script type="text/javascript" src="libs/owl-carousel/owl.carousel.js"></script>
         <script type="text/javascript" src="libs/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
-          <script type="text/javascript" src="libs/stickyjs/jquery.sticky.js"></script>
-        <link type="text/javascript" href="libs/fullpage/jquery.fullPage.min.js">
+        <script type="text/javascript" src="libs/stickyjs/jquery.sticky.js"></script>
         <script type="text/javascript" src="assets/js/core.js"></script>
     </body>
 </html>
